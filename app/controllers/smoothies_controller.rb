@@ -11,7 +11,7 @@ class SmoothiesController < ApplicationController
     end 
     
     def create 
-        @smoothie = Smoothie.new(smoothie_params)
+        @smoothie = Smoothie.create(smoothie_params)
         if @smoothie
             render json: @smoothie, status: :ok
         else
@@ -23,7 +23,7 @@ class SmoothiesController < ApplicationController
     private
 
     def smoothie_params
-        params.permit(:name, :ingredients, :likes, :category, :created_by)
+        params.permit(:name, :ingredients, :likes, :category, :created_by, :image)
     end 
     
 end 
