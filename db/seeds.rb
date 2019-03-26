@@ -8,3 +8,9 @@
 
 Smoothie.create(name:"Kale and Ginger", ingredients: "Kale, Ginger, Spinach, Protein Powder, Almond Milk", likes: 5, category: "post workout", created_by: "Megan")
 Smoothie.create(name:"Strawberry and Peach", ingredients: "Strawberries, Peach, Chia Seeds, Protein Powder, Almond Milk", likes: 10, category: "preworkout", created_by: "Leigh")
+
+User.create(username:"Megan")
+User.create(username:"Leigh")
+
+Favorite.create(user_id:1, smoothie_id:1)
+Favorite.create(user_id:2, smoothie_id:2)
