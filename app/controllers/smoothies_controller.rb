@@ -25,9 +25,9 @@ class SmoothiesController < ApplicationController
         @smoothie.update(smoothie_params)
     end 
 
-    def delete
+    def destroy
         @smoothie = Smoothie.find(params[:id])
-        @smoothie.delete
+        @smoothie.destroy
     end 
 
     private
