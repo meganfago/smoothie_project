@@ -20,6 +20,11 @@ class SmoothiesController < ApplicationController
         end 
     end 
 
+    def update 
+        @smoothie = Smoothie.find(params[:id])
+        @smoothie.update(smoothie_params)
+    end 
+
     private
 
     def smoothie_params
